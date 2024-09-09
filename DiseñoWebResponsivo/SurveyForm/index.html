@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colored Markers</title>
+    <title>Encuesta</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <h1 id="title" class="text">Entrevista</h1>
     <p id="description" class="text">Este es un cuestionario corto para apoyar una entrevista</p>
     <form id="survey-form">
+      <fieldset>
+        <legend>Identifícate</legend>
         <label id="name-label">1: Coloque su nombre</label>
-        <input type="text" id="name" placeholder="Nombre completo">
+        <input type="text" id="name" placeholder="Nombre completo" required>
         <label id="email-label">2: Su correo de contacto personal</label>
-        <input type="email" id="email" placeholder="Coloque su correo electrónico">
+        <input type="email" id="email" placeholder="Coloque su correo electrónico" required>
         <label id="number-label">3: Su edad no debe ser menor a 10, ni mayor a 65</label>
         <input type="number" id="number" min="10" max="65" placeholder="Su edad aquí">
         <select id="dropdown" name="referrer">
@@ -22,10 +24,11 @@
             <option value="2">Trabajador</option>
             <option value="3">En paro</option>
         </select>
+      </fieldset>
         <fieldset>
             <legend>Escoga su género</legend>
-        <label for="radio-hombre"><input id="radio-hombre" class="genero" type="radio" class="inline">Hombre</label>
-        <label for="radio-mujer"><input id="radio-mujer" class="genero" type="radio" class="inline">Mujer</label>
+        <label for="radio-hombre"><input id="radio-hombre" value="radio-hombre" name="genero" type="radio" class="inline">Hombre</label>
+        <label for="radio-mujer"><input id="radio-mujer" value="radio-mujer" name="genero" type="radio" class="inline">Mujer</label>
         </fieldset>
         <fieldset>
             <label for="acuerdo"><input class="inline" type="checkbox"id="acuerdo" value="accedido">¿Está de acuerdo con guardar su información?</label>
