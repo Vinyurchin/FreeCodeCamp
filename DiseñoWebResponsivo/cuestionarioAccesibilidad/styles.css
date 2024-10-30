@@ -10,7 +10,10 @@ header {
   height: 50px;
   background-color: #1b1b32;
   display: flex;
-
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
 }
 
 #logo {
@@ -23,6 +26,7 @@ header {
 h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em);
+  text-align: center;
 }
 
 nav {
@@ -34,6 +38,11 @@ nav {
 nav > ul {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
 }
 
 nav > ul > li {
@@ -54,6 +63,16 @@ li > a {
   text-decoration: none;
 }
 
+main {
+  padding-top: 50px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+
 h1,
 h2 {
   font-family: Verdana, Tahoma;
@@ -61,7 +80,40 @@ h2 {
 
 h2 {
   border-bottom: 4px solid #dfdfe2;
+  margin-top: 0px;
+  padding-top: 60px;
 }
+
+.info {
+  padding: 10px 0 0 5px;
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0px 15px;
+}
+
+input {
+  font-size: 1rem;
+}
+
+.info label, .info input {
+  display: inline-block;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align: right;
+}
+
+
+
 
 h3::before {
   content: "Question #";
